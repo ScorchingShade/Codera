@@ -52,6 +52,8 @@ body {
 .editor-title {
     display: flex;
     justify-content: space-between;
+    font-size: 1.2em;
+    align-items: center;
     background-color: hsl(225, 6%, 13%);
     color: white;
     padding: .5rem .5rem .5rem 1rem;
