@@ -7,20 +7,11 @@ import "codemirror/mode/css/css";
 import { Controlled as ControlledEditor } from "react-codemirror2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCompressAlt, faExpandAlt } from "@fortawesome/free-solid-svg-icons";
+import { DISPLAY_NAMES_IMAGES } from "../constants/displayNamesImages";
 
 function Editor(props) {
   const { displayName, language, value, onChange } = props;
-  let imgName = "";
-
-  if (displayName === "HTML") {
-    imgName = "248-mega.png";
-  }
-  if (displayName === "JS") {
-    imgName = "208-mega.png";
-  }
-  if (displayName === "CSS") {
-    imgName = "094-mega.png";
-  }
+  let imgName = DISPLAY_NAMES_IMAGES[displayName] || "";
 
   const [open, setOpen] = useState(true);
 
