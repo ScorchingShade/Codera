@@ -3,6 +3,11 @@ import Editor from "./Editor";
 import useLocalStorage from "../hooks/useLocalStorage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRedo } from "@fortawesome/free-solid-svg-icons";
+import {
+  CSS_DISPLAY_NAME,
+  HTML_DISPLAY_NAME,
+  JS_DISPLAY_NAME,
+} from "../constants/displayNames";
 
 function App() {
   const [html, setHtml] = useLocalStorage("html");
@@ -51,19 +56,19 @@ function App() {
       <div className="pane top-pane">
         <Editor
           language="xml"
-          displayName="HTML"
+          displayName={HTML_DISPLAY_NAME}
           value={html}
           onChange={setHtml}
         />
         <Editor
           language="css"
-          displayName="CSS"
+          displayName={CSS_DISPLAY_NAME}
           value={css}
           onChange={setCss}
         />
         <Editor
           language="javascript"
-          displayName="JS"
+          displayName={JS_DISPLAY_NAME}
           value={js}
           onChange={setJs}
         />
