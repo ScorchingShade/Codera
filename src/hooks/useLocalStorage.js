@@ -8,7 +8,7 @@ function useLocalStorage(key, initialValue) {
 
     const[value, setValue]=useState(()=>{
         const jsonValue=localStorage.getItem(prefixedKey);
-        if(jsonValue) return JSON.parse(jsonValue)
+        if(jsonValue!=null) return JSON.parse(jsonValue)
 
         if(typeof initialValue==='function'){
             return initialValue()
