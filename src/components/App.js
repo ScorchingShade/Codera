@@ -2,12 +2,16 @@ import React, { useEffect } from "react";
 import Editor from "./Editor";
 import useLocalStorage from "../hooks/useLocalStorage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRedo } from "@fortawesome/free-solid-svg-icons";
+
+import { faRedoAlt } from "@fortawesome/free-solid-svg-icons";
+// =======
+// import { faRedo } from "@fortawesome/free-solid-svg-icons";
 import {
   CSS_DISPLAY_NAME,
   HTML_DISPLAY_NAME,
   JS_DISPLAY_NAME,
 } from "../constants/displayNames";
+
 
 function App() {
   const [html, setHtml] = useLocalStorage("html");
@@ -50,7 +54,7 @@ function App() {
           Codera
         </h1>
         <button className="clear-all-btn" onClick={clearAll}>
-          <FontAwesomeIcon icon={faRedo} />
+          <FontAwesomeIcon icon={faRedoAlt} />
         </button>
       </div>
       <div className="pane top-pane">
