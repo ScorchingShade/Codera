@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Editor from "./Editor";
 import useLocalStorage from "../hooks/useLocalStorage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRedo } from "@fortawesome/free-solid-svg-icons";
+import { faSync } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [html, setHtml] = useLocalStorage("html");
@@ -38,14 +38,15 @@ function App() {
         <h1 className="ti ct">
           <span>
             <img
-              src={require("../resources/poke-icons/006-mega-x.png")}
+              src={require("../resources/poke-icons/005.png")}
+              title="Online Code Editor"
               alt=""
             />
           </span>
           Codera
         </h1>
-        <button className="clear-all-btn" onClick={clearAll}>
-          <FontAwesomeIcon icon={faRedo} />
+        <button className="clear-all-btn" onClick={clearAll} title="Refresh">
+          <FontAwesomeIcon icon={faSync} />
         </button>
       </div>
       <div className="pane top-pane">
