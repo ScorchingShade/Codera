@@ -1,0 +1,112 @@
+html, body{
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.header {
+	margin: 0 auto;
+	width: 100%;
+	height: 40px;
+	border-top: #D1CAC4 1px solid;
+	border-bottom: #D1CAC4 1px solid;
+	background-color: #EEEDEF;
+}
+
+#codePlayer {
+	margin-left: 15px;
+}
+
+.codePlayer {
+	height: 32px;
+	background-color: #EEEDEF;
+	float: left;
+	font-weight: 900;
+	padding-top: 8px;
+}
+
+.toggles {
+	height: 36px;
+	width: 300px;
+	margin: 0 auto;
+	/*background-color: #EEEDEF;*/
+	padding-left: 50px;
+	position: relative;
+	top: 4px;
+}
+
+.toggles li {
+	height: 23px;
+	padding: 7px 7px 0 7px;
+	float: left;
+	list-style: none;
+	border: 1px solid #776B5C;
+	/*background-color: #776B5C;*/ /*will do something with hover or click later*/
+}
+
+.run {
+	height: 40px;
+	float: right;
+	background-color: #EEEDEF;
+	padding-right: 15px;
+}
+
+#run {
+	margin: 5px 0 0 0;
+	height: 30px;
+	width: 50px;
+	border-radius: 7px;
+	font-size: 1.15em;
+}
+
+#html {
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+}
+
+#result {
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+
+.codeContainer {
+	position: relative;
+	float: left;
+	width: 50%;
+}
+
+.codeContainer textarea {
+	width: 99%;
+	height: 100%;
+	border: none;
+	border-right: 1px solid #D1CAC4;
+	font-family: monotype;
+	font-size: 90%;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+.codeLabel {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+#CSSContainer, #JSContainer {
+	display: none;
+}
+
+iframe {
+	height: 100%;
+	position: relative;
+	left: 20px;
+	border: none;
+}
+
+.selected {
+	background-color: #776B5C;
+}

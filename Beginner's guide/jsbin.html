@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JSBin Clone</title>
+	<script src="jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="wrapperDiv">
+		
+		<header class="header">
+			<div class="codePlayer">
+				<span id="codePlayer">Codera mini</span>
+			</div>
+			
+				
+			
+			<div class="run">
+				<button id="run">Run</button>
+			</div>
+
+			<ul class="toggles">
+					<li class="toggle selected" id="html">HTML</li>
+					<li class="toggle"  id="css">CSS</li>
+					<li class="toggle"  id="js">JS</li>
+					<li class="toggle selected"  id="result">Result</li>
+				</ul>
+
+		</header>
+		<div class="clear"></div>
+		<div class="codeContainer" id="HTMLContainer">
+			<div class="codeLabel">HTML</div>
+			<textarea id="htmlCode"></textarea>
+		</div>
+
+		<div class="codeContainer" id="CSSContainer">
+			<div class="codeLabel">CSS</div>
+			<textarea id="cssCode"></textarea>
+		</div>
+
+		<div class="codeContainer" id="JSContainer">
+			<div class="codeLabel">JS</div>
+			<textarea id="jsCode"></textarea>
+		</div>
+
+		<div class="codeContainer" id="ResultContainer">
+			<div class="codeLabel">Result</div>
+			<iframe id="resultFrame"></iframe>
+		</div>
+		<!-- SCRIPTS -->
+	<script src="jsbinjquery.js"></script>
+</body>
+</html>
