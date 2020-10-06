@@ -7,11 +7,21 @@ import "codemirror/mode/css/css";
 import { Controlled as ControlledEditor } from "react-codemirror2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCompressAlt, faExpandAlt } from "@fortawesome/free-solid-svg-icons";
-import { DISPLAY_NAMES_IMAGES } from "../constants/displayNamesImages";
+import { faHtml5, faCss3Alt, faJs } from "@fortawesome/free-brands-svg-icons";
 
 function Editor(props) {
   const { displayName, language, value, onChange } = props;
-  let imgName = DISPLAY_NAMES_IMAGES[displayName] || "";
+  let imgName = "";
+
+  if (displayName === "HTML") {
+    imgName = faHtml5;
+  }
+  if (displayName === "CSS") {
+    imgName = faCss3Alt;
+  }
+  if (displayName === "JS") {
+    imgName = faJs;
+  }
 
   const [open, setOpen] = useState(true);
 
@@ -20,16 +30,17 @@ function Editor(props) {
   }
 
   return (
-    <div className={`editor-container ${open ? "" : "collapsed"}`}>
+    <div className={`editor-container ${open ? "expand" : "collapsed"}`}>
       <div className="editor-title">
         <span>
-          <img src={require(`../resources/poke-icons/${imgName}`)} alt="" />
+          <FontAwesomeIcon icon={imgName} />
         </span>
         {displayName}
         <button
           type="button"
           className="expand-collapse-btn"
           onClick={() => setOpen((prevOpen) => !prevOpen)}
+          title={open ? "Collapse" : "Expand"}
         >
           <FontAwesomeIcon icon={open ? faCompressAlt : faExpandAlt} />
         </button>

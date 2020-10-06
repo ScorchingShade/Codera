@@ -2,16 +2,7 @@ import React, { useEffect } from "react";
 import Editor from "./Editor";
 import useLocalStorage from "../hooks/useLocalStorage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import { faRedoAlt } from "@fortawesome/free-solid-svg-icons";
-// =======
-// import { faRedo } from "@fortawesome/free-solid-svg-icons";
-import {
-  CSS_DISPLAY_NAME,
-  HTML_DISPLAY_NAME,
-  JS_DISPLAY_NAME,
-} from "../constants/displayNames";
-
+import { faSync } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [html, setHtml] = useLocalStorage("html");
@@ -47,32 +38,33 @@ function App() {
         <h1 className="ti ct">
           <span>
             <img
-              src={require("../resources/poke-icons/006-mega-x.png")}
+              src={require("../resources/poke-icons/005.png")}
+              title="Online Code Editor"
               alt=""
             />
           </span>
           Codera
         </h1>
-        <button className="clear-all-btn" onClick={clearAll}>
-          <FontAwesomeIcon icon={faRedoAlt} />
+        <button className="clear-all-btn" onClick={clearAll} title="Refresh">
+          <FontAwesomeIcon icon={faSync} />
         </button>
       </div>
       <div className="pane top-pane">
         <Editor
           language="xml"
-          displayName={HTML_DISPLAY_NAME}
+          displayName="HTML"
           value={html}
           onChange={setHtml}
         />
         <Editor
           language="css"
-          displayName={CSS_DISPLAY_NAME}
+          displayName="CSS"
           value={css}
           onChange={setCss}
         />
         <Editor
           language="javascript"
-          displayName={JS_DISPLAY_NAME}
+          displayName="JS"
           value={js}
           onChange={setJs}
         />
