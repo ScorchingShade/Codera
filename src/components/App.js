@@ -34,17 +34,17 @@ function App() {
 
   return (
     <>
-      <div className="top-header">
+      <div className="top-header" style={{ backgroundColor : '#3c3e44'}}>
         <div></div>
-        <h1 className="ti ct">
+        <h1 className="ti ct" style={{color:"white"}}>
           <span>
             <img
-              src={require("../resources/poke-icons/005.png")}
+              src={require("../resources/poke-icons/006-mega-x.png")}
               title="Online Code Editor"
               alt=""
             />
-          </span>
-          Codera
+          </span> 
+           Codera - Your Coding Arena
         </h1>
         <button className="clear-all-btn" onClick={clearAll} title="Refresh">
           <FontAwesomeIcon icon={faSync} />
