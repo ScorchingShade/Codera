@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body{
+    overflow: hidden;
+}
+
+.nav{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background-color: rgba(45, 52, 54, 0.8);
+}
+
+.nav ul{
+    text-align: center;
+    padding: 2rem 0;
+    color: white;
+}
+
+.navIcon{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navIcon li{
+    width: 3rem;
+    height: 3rem;
+    color: black;
+    border-radius: 50%;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.navIcon i{
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+.redbg{
+    background-color: red;
+}
+.whitebg{
+    background-color: white;
+}
+.navIcon img{
+    padding-right: 5px;
+    transform: rotate(180deg);
+    padding-right: 0px;
+}
+
+.tables{
+    height: 50vh;
+    background-color: rgba(45, 52, 54, 0.8);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+.tables textarea{
+    resize: none;
+    height: 40vh;
+    padding-left: 5px;
+    background-color: rgba(45, 52, 54, 0.4);
+    border: none;
+    width: 99%;
+    color: white;
+    font-size: 1rem;
+}
+.tables textarea:focus{
+    outline: none;
+}
+
+.inputHeader{
+    background-color: rgba(45, 52, 54, 0.9);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    border-radius: 5px 5px  0 0 ;
+}
+
+.inpIcon{
+    text-align: left;
+    padding-left: 1rem ;
+}
+
+.inpSecIcon{
+    text-align: right;
+    padding-right: 1rem ;
+}
